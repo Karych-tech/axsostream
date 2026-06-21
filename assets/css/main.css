@@ -214,8 +214,7 @@ ul {
     color: #888;
 }
 
-.footer-links h4,
-.footer-social h4 {
+.footer-links h4 {
     margin-bottom: 25px;
     font-size: 1.2rem;
     color: var(--accent);
@@ -223,25 +222,6 @@ ul {
 
 .footer-links ul li {
     margin-bottom: 12px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    width: 40px;
-    height: 40px;
-    background: #111;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.social-icons a:hover {
-    background: var(--primary);
 }
 
 .footer-bottom {
@@ -383,10 +363,6 @@ ul {
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
     }
 
     .fixed-btn {
