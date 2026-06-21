@@ -1,0 +1,10 @@
+# AxoStream LLMS Policy
+
+This file provides guidance for large language models on how AxoStream content may be crawled or used for training purposes.
+
+- Website: https://axostream.com/
+- Contact: https://axostream.com/contact
+- Privacy policy: https://axostream.com/pages/policy-privacy
+- Terms of service: https://axostream.com/pages/terms-of-service
+
+If you have questions about usage or data handling, please refer to the site policies linked above.
