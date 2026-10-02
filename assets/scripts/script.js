@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generates a pre-filled WhatsApp link based on the selected plan name
     const buildWhatsAppUrl = (planName) => {
         const message = encodeURIComponent(`I'm interested in the ${planName} IPTV plan.`);
-        return `https://wa.me/212677510190?text=${message}`;
+        return `https://wa.me/212706421275?text=${message}`;
     };
 
     /* ----------------------------------------------------------------------
