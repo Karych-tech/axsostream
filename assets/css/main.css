@@ -73,12 +73,28 @@ ul {
 .btn-primary {
     background: var(--primary);
     color: white;
+    box-shadow: 0 0 12px rgba(229, 57, 53, 0.18);
 }
 
 .btn-primary:hover {
     background: #d32f2f;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
     color: black;
+    box-shadow: 0 0 20px rgba(229, 57, 53, 0.42);
+}
+
+.btn-outline {
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    box-shadow: 0 0 12px rgba(160, 240, 255, 0.35), 0 0 26px rgba(0, 210, 255, 0.18);
+}
+
+.btn-outline:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.65), 0 0 42px rgba(0, 210, 255, 0.5);
 }
 
 /* ==========================================================================
@@ -92,6 +108,7 @@ ul {
     display: flex;
     align-items: center;
     background: rgba(3, 1, 1, 0.95);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     z-index: 1000;
     border-bottom: 1px solid rgba(184, 136, 90, 0.1);
@@ -219,7 +236,7 @@ ul {
     color: #888;
 }
 
-.footer-links h4 {
+.footer-links .footer-title {
     margin-bottom: 25px;
     font-size: 1.2rem;
     color: var(--accent);
@@ -260,6 +277,7 @@ ul {
     left: 30px;
     background: #0088cc;
     color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 16px rgba(0, 136, 204, 0.42);
 }
 
 .telegram-btn:hover {
@@ -272,6 +290,7 @@ ul {
     right: 30px;
     background: #25d366;
     color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 16px rgba(37, 211, 102, 0.42);
 }
 
 .whatsapp-btn-fixed:hover {
@@ -280,6 +299,44 @@ ul {
     box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
 }
 
+/* ==========================================================================
+   Neon glow effects (shared with style.css)
+   ========================================================================== */
+.hero-image img,
+.about-image img {
+    animation: hero-neon-pulse 3s ease-in-out infinite;
+}
+
+@keyframes hero-neon-pulse {
+    0%,
+    100% {
+        filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.38))
+            drop-shadow(0 0 20px rgba(0, 110, 255, 0.22));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 18px rgba(0, 225, 255, 0.72))
+            drop-shadow(0 0 32px rgba(0, 110, 255, 0.48));
+    }
+}
+
+.nav-cta,
+.hero-btns .btn-primary {
+    box-shadow: 0 0 14px rgba(255, 140, 0, 0.45), 0 0 28px rgba(255, 140, 0, 0.2);
+}
+
+.nav-cta:hover,
+.hero-btns .btn-primary:hover {
+    box-shadow: 0 0 22px rgba(255, 140, 0, 0.8), 0 0 42px rgba(255, 140, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-image img,
+    .about-image img {
+        animation: none;
+        filter: drop-shadow(0 0 12px rgba(0, 180, 255, 0.4));
+    }
+}
 /* ==========================================================================
    Responsive
    ========================================================================== */
@@ -358,6 +415,18 @@ ul {
 
     .nav-links.active li:nth-child(4) {
         transition-delay: 0.4s;
+    }
+
+    .nav-links.active li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    .nav-links.active li:nth-child(6) {
+        transition-delay: 0.6s;
+    }
+
+    .nav-links.active li:nth-child(7) {
+        transition-delay: 0.7s;
     }
 
     .nav-links a {

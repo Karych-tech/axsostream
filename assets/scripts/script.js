@@ -1,4 +1,4 @@
-﻿﻿﻿﻿/**
+/**
  * Main site script for AxoStream
  * Organized for future editing and maintenance.
  *
@@ -165,8 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Performance Note: This listener runs on every scroll move.
         window.addEventListener('scroll', () => {
-            backToTopButton.style.display = window.pageYOffset > 300 ? 'block' : 'none';
-        });
+            backToTopButton.style.display = window.scrollY > 300 ? 'block' : 'none';
+        }, { passive: true });
 
         // Trigger the scroll to top helper
         backToTopButton.addEventListener('click', scrollToTop);
